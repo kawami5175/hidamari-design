@@ -408,6 +408,86 @@ h3 {
   font-weight: 800;
 }
 
+.activities-section {
+  background: #f7fbf9;
+  border-block: 1px solid #d8ece6;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(43, 45, 47, 0.06);
+}
+
+.activity-card.design {
+  border-top: 5px solid var(--teal);
+}
+
+.activity-card.music {
+  border-top: 5px solid var(--sun);
+}
+
+.activity-card.cafe {
+  border-top: 5px solid var(--pink);
+}
+
+.activity-label {
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 4px 10px;
+  color: var(--teal-dark);
+  background: #eef8f6;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.activity-card.music .activity-label {
+  color: #7b5700;
+  background: #fff4cf;
+}
+
+.activity-card.cafe .activity-label {
+  color: #9c2851;
+  background: #ffeaf1;
+}
+
+.activity-card p:not(.activity-label) {
+  margin: 0;
+  color: var(--muted);
+}
+
+.activity-card a,
+.activity-card span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--teal-dark);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.activity-card.music span {
+  color: #7b5700;
+}
+
+.activity-card.cafe span {
+  color: #9c2851;
+}
+
 .contact {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
@@ -459,6 +539,7 @@ h3 {
   .service-grid,
   .price-grid,
   .hearing-grid,
+  .activity-grid,
   .feature-list {
     grid-template-columns: 1fr;
   }
