@@ -127,7 +127,20 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+.lead,
+.channel-box strong {
+  word-break: keep-all;
+  line-break: strict;
+}
+
+.line {
+  display: block;
 }
 
 h1 {
