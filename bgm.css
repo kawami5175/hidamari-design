@@ -198,6 +198,16 @@ h3 {
   background: rgba(255, 247, 232, 0.08);
 }
 
+.text-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .section {
   padding: clamp(58px, 8vw, 104px) clamp(20px, 5vw, 72px);
 }
@@ -321,6 +331,89 @@ h3 {
   font-size: 14px;
 }
 
+.relation-section {
+  background: #101617;
+  border-top: 1px solid var(--line);
+}
+
+.relation-section .section-heading p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.relation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.relation-grid article {
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  padding: 26px;
+  background: #1b2223;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.relation-grid article:nth-child(1) {
+  border-top: 5px solid var(--teal);
+}
+
+.relation-grid article:nth-child(2) {
+  border-top: 5px solid var(--amber);
+}
+
+.relation-grid article:nth-child(3) {
+  border-top: 5px solid var(--wine);
+}
+
+.relation-label {
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 4px 10px;
+  color: #071112;
+  background: var(--teal);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.relation-grid article:nth-child(2) .relation-label {
+  background: var(--amber);
+}
+
+.relation-grid article:nth-child(3) .relation-label {
+  color: var(--cream);
+  background: var(--wine);
+}
+
+.relation-grid p:not(.relation-label) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.relation-grid a,
+.relation-grid span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--teal);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.relation-grid article:nth-child(2) a {
+  color: var(--amber);
+}
+
+.relation-grid article:nth-child(3) span {
+  color: var(--wine);
+}
+
 .channel-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
@@ -368,6 +461,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .relation-grid,
   .scene-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -396,6 +490,10 @@ h3 {
   }
 
   .scene-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .relation-grid {
     grid-template-columns: 1fr;
   }
 
